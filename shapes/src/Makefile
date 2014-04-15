@@ -112,6 +112,19 @@ depend:
 .PHONY : ../bin/shapes/fast
 
 #=============================================================================
+# Target rules for targets named ../bin/testBox
+
+# Build rule for target.
+../bin/testBox: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ../bin/testBox
+.PHONY : ../bin/testBox
+
+# fast build rule for target.
+../bin/testBox/fast:
+	$(MAKE) -f CMakeFiles/../bin/testBox.dir/build.make CMakeFiles/../bin/testBox.dir/build
+.PHONY : ../bin/testBox/fast
+
+#=============================================================================
 # Target rules for targets named Box
 
 # Build rule for target.
@@ -148,6 +161,30 @@ box.cpp.s:
 	$(MAKE) -f CMakeFiles/Box.dir/build.make CMakeFiles/Box.dir/box.cpp.s
 .PHONY : box.cpp.s
 
+home/doancea/src/bfcpp/shapes/tests/testbox.o: home/doancea/src/bfcpp/shapes/tests/testbox.cpp.o
+.PHONY : home/doancea/src/bfcpp/shapes/tests/testbox.o
+
+# target to build an object file
+home/doancea/src/bfcpp/shapes/tests/testbox.cpp.o:
+	$(MAKE) -f CMakeFiles/../bin/testBox.dir/build.make CMakeFiles/../bin/testBox.dir/home/doancea/src/bfcpp/shapes/tests/testbox.cpp.o
+.PHONY : home/doancea/src/bfcpp/shapes/tests/testbox.cpp.o
+
+home/doancea/src/bfcpp/shapes/tests/testbox.i: home/doancea/src/bfcpp/shapes/tests/testbox.cpp.i
+.PHONY : home/doancea/src/bfcpp/shapes/tests/testbox.i
+
+# target to preprocess a source file
+home/doancea/src/bfcpp/shapes/tests/testbox.cpp.i:
+	$(MAKE) -f CMakeFiles/../bin/testBox.dir/build.make CMakeFiles/../bin/testBox.dir/home/doancea/src/bfcpp/shapes/tests/testbox.cpp.i
+.PHONY : home/doancea/src/bfcpp/shapes/tests/testbox.cpp.i
+
+home/doancea/src/bfcpp/shapes/tests/testbox.s: home/doancea/src/bfcpp/shapes/tests/testbox.cpp.s
+.PHONY : home/doancea/src/bfcpp/shapes/tests/testbox.s
+
+# target to generate assembly for a file
+home/doancea/src/bfcpp/shapes/tests/testbox.cpp.s:
+	$(MAKE) -f CMakeFiles/../bin/testBox.dir/build.make CMakeFiles/../bin/testBox.dir/home/doancea/src/bfcpp/shapes/tests/testbox.cpp.s
+.PHONY : home/doancea/src/bfcpp/shapes/tests/testbox.cpp.s
+
 shapes.o: shapes.cpp.o
 .PHONY : shapes.o
 
@@ -179,12 +216,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... ../bin/shapes"
+	@echo "... ../bin/testBox"
 	@echo "... Box"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... box.o"
 	@echo "... box.i"
 	@echo "... box.s"
+	@echo "... home/doancea/src/bfcpp/shapes/tests/testbox.o"
+	@echo "... home/doancea/src/bfcpp/shapes/tests/testbox.i"
+	@echo "... home/doancea/src/bfcpp/shapes/tests/testbox.s"
 	@echo "... shapes.o"
 	@echo "... shapes.i"
 	@echo "... shapes.s"
