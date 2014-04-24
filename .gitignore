@@ -1,4 +1,4 @@
-# Compiled Object files
+#Compiled Object files
 *.slo
 *.lo
 *.o
@@ -19,3 +19,13 @@
 *.exe
 *.out
 *.app
+bin/
+
+# Swap Files
+*.swp
+*.swo
+
+# CMakeFiles
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
