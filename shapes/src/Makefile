@@ -125,6 +125,19 @@ depend:
 .PHONY : ../bin/testBox/fast
 
 #=============================================================================
+# Target rules for targets named ../bin/testOval
+
+# Build rule for target.
+../bin/testOval: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ../bin/testOval
+.PHONY : ../bin/testOval
+
+# fast build rule for target.
+../bin/testOval/fast:
+	$(MAKE) -f CMakeFiles/../bin/testOval.dir/build.make CMakeFiles/../bin/testOval.dir/build
+.PHONY : ../bin/testOval/fast
+
+#=============================================================================
 # Target rules for targets named Box
 
 # Build rule for target.
@@ -136,6 +149,19 @@ Box: cmake_check_build_system
 Box/fast:
 	$(MAKE) -f CMakeFiles/Box.dir/build.make CMakeFiles/Box.dir/build
 .PHONY : Box/fast
+
+#=============================================================================
+# Target rules for targets named Oval
+
+# Build rule for target.
+Oval: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Oval
+.PHONY : Oval
+
+# fast build rule for target.
+Oval/fast:
+	$(MAKE) -f CMakeFiles/Oval.dir/build.make CMakeFiles/Oval.dir/build
+.PHONY : Oval/fast
 
 box.o: box.cpp.o
 .PHONY : box.o
@@ -185,6 +211,54 @@ home/doancea/src/bfcpp/shapes/tests/testbox.cpp.s:
 	$(MAKE) -f CMakeFiles/../bin/testBox.dir/build.make CMakeFiles/../bin/testBox.dir/home/doancea/src/bfcpp/shapes/tests/testbox.cpp.s
 .PHONY : home/doancea/src/bfcpp/shapes/tests/testbox.cpp.s
 
+home/doancea/src/bfcpp/shapes/tests/testoval.o: home/doancea/src/bfcpp/shapes/tests/testoval.cpp.o
+.PHONY : home/doancea/src/bfcpp/shapes/tests/testoval.o
+
+# target to build an object file
+home/doancea/src/bfcpp/shapes/tests/testoval.cpp.o:
+	$(MAKE) -f CMakeFiles/../bin/testOval.dir/build.make CMakeFiles/../bin/testOval.dir/home/doancea/src/bfcpp/shapes/tests/testoval.cpp.o
+.PHONY : home/doancea/src/bfcpp/shapes/tests/testoval.cpp.o
+
+home/doancea/src/bfcpp/shapes/tests/testoval.i: home/doancea/src/bfcpp/shapes/tests/testoval.cpp.i
+.PHONY : home/doancea/src/bfcpp/shapes/tests/testoval.i
+
+# target to preprocess a source file
+home/doancea/src/bfcpp/shapes/tests/testoval.cpp.i:
+	$(MAKE) -f CMakeFiles/../bin/testOval.dir/build.make CMakeFiles/../bin/testOval.dir/home/doancea/src/bfcpp/shapes/tests/testoval.cpp.i
+.PHONY : home/doancea/src/bfcpp/shapes/tests/testoval.cpp.i
+
+home/doancea/src/bfcpp/shapes/tests/testoval.s: home/doancea/src/bfcpp/shapes/tests/testoval.cpp.s
+.PHONY : home/doancea/src/bfcpp/shapes/tests/testoval.s
+
+# target to generate assembly for a file
+home/doancea/src/bfcpp/shapes/tests/testoval.cpp.s:
+	$(MAKE) -f CMakeFiles/../bin/testOval.dir/build.make CMakeFiles/../bin/testOval.dir/home/doancea/src/bfcpp/shapes/tests/testoval.cpp.s
+.PHONY : home/doancea/src/bfcpp/shapes/tests/testoval.cpp.s
+
+oval.o: oval.cpp.o
+.PHONY : oval.o
+
+# target to build an object file
+oval.cpp.o:
+	$(MAKE) -f CMakeFiles/Oval.dir/build.make CMakeFiles/Oval.dir/oval.cpp.o
+.PHONY : oval.cpp.o
+
+oval.i: oval.cpp.i
+.PHONY : oval.i
+
+# target to preprocess a source file
+oval.cpp.i:
+	$(MAKE) -f CMakeFiles/Oval.dir/build.make CMakeFiles/Oval.dir/oval.cpp.i
+.PHONY : oval.cpp.i
+
+oval.s: oval.cpp.s
+.PHONY : oval.s
+
+# target to generate assembly for a file
+oval.cpp.s:
+	$(MAKE) -f CMakeFiles/Oval.dir/build.make CMakeFiles/Oval.dir/oval.cpp.s
+.PHONY : oval.cpp.s
+
 shapes.o: shapes.cpp.o
 .PHONY : shapes.o
 
@@ -217,7 +291,9 @@ help:
 	@echo "... depend"
 	@echo "... ../bin/shapes"
 	@echo "... ../bin/testBox"
+	@echo "... ../bin/testOval"
 	@echo "... Box"
+	@echo "... Oval"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... box.o"
@@ -226,6 +302,12 @@ help:
 	@echo "... home/doancea/src/bfcpp/shapes/tests/testbox.o"
 	@echo "... home/doancea/src/bfcpp/shapes/tests/testbox.i"
 	@echo "... home/doancea/src/bfcpp/shapes/tests/testbox.s"
+	@echo "... home/doancea/src/bfcpp/shapes/tests/testoval.o"
+	@echo "... home/doancea/src/bfcpp/shapes/tests/testoval.i"
+	@echo "... home/doancea/src/bfcpp/shapes/tests/testoval.s"
+	@echo "... oval.o"
+	@echo "... oval.i"
+	@echo "... oval.s"
 	@echo "... shapes.o"
 	@echo "... shapes.i"
 	@echo "... shapes.s"
