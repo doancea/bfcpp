@@ -11,6 +11,7 @@ class Oval {
 	public:		
 		Oval(int);
 		int getHeight();
+		int getWidth();
 	private:
 		int height;
 };

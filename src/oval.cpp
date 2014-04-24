@@ -11,6 +11,10 @@ using std::ostringstream;
 Oval::Oval(int h) {
 	height = h;
 }
+
+int Oval::getWidth() {
+	return height / 2;
+}
 /*
 string Oval::getRow(int row) {
 	return string(1, '*');	
