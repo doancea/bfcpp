@@ -8,16 +8,14 @@ using std::string;
 using std::ostringstream;
 
 #include "oval.h"
-Oval::Oval(int h, int w, char c) {
+Oval::Oval(int h) {
 	height = h;
-	width = w;
-	sideChar = c;
 }
-
+/*
 string Oval::getRow(int row) {
 	return string(1, '*');	
 }
-
+*/
 int Oval::getHeight() {
 	return height;
 }
